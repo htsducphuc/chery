@@ -1,0 +1,55 @@
+@import './header';
+@import './gallery';
+@import './contact';
+@import './landing';
+@import './services';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  // .container {
+  //   &.dark::before {
+  //     content: '';
+  //     position: fixed;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: rgba(0, 0, 0, 0.5);
+  //     left: 0;
+  //     top: 0;
+  //     z-index: 999;
+  //     transition: all 0.5s ease;
+  //   }
+  // }
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  height: 8vh;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+@media screen and (max-width: 375px) {
+  .footer {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,60 @@
+.contact {
+  min-height: 100vh;
+  padding-top: 7vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  background: lightgoldenrodyellow;
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-right: 1px solid black;
+
+    img {
+      width: 80%;
+      margin: 2rem 0rem;
+    }
+    .schedule {
+      padding: 2rem;
+      display: flex;
+      ul {
+        list-style: none;
+      }
+      .weekdays {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    p {
+      margin: 2rem 0rem;
+    }
+    .google-maps {
+      width: 90%;
+      box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contact {
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    .information {
+      border: none;
+      border-bottom: 1px dotted black;
+      width: 100%;
+    }
+    .maps {
+      width: 95%;
+    }
+  }
+}

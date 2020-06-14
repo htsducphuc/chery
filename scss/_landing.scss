@@ -1,0 +1,47 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../images/background.jpg);
+
+  background-position: center center;
+  background-size: cover;
+  transition: all 0.3s ease;
+
+  .call-to-action {
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 1rem;
+    color: rgb(53, 53, 53);
+    padding: 1rem;
+
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 3rem;
+    }
+    p {
+      margin: 2rem 0rem;
+      font-size: 1.3rem;
+      text-align: end;
+    }
+    div {
+      display: flex;
+      justify-content: flex-end;
+      input {
+        width: 7rem;
+        padding: 1rem 0rem;
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        background-color: #fabf3f;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        &:hover {
+          background-color: #fcb213;
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.header {
+  font-family: 'Lobster', cursive;
+  display: flex;
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  top: 0rem;
+  z-index: 1000;
+  height: 8vh;
+  width: 85%;
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0rem 0rem 1rem 1rem;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.123);
+  transition: all 0.5s ease;
+  // Navbar transition
+  /*  
+  &.scrolled {
+    height: 7vh;
+  } */
+
+  .logo {
+    height: 5rem;
+    width: auto;
+    margin-top: 2.3rem;
+    margin-left: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    font-size: 1.2rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        padding: 0 20px;
+        font-weight: 450;
+        color: rgb(58, 58, 58);
+        &:hover {
+          color: #fabf3f;
+        }
+      }
+    }
+  }
+  .phone {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    width: 20%;
+    color: rgb(58, 58, 58);
+    .phone-icon {
+      color: #3b3b3b;
+      height: 2rem;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    a {
+      text-decoration: none;
+      color: green;
+    }
+  }
+  .language {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+    list-style: none;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+    width: 10%;
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    align-items: center;
+    position: relative;
+
+    .burger-dash {
+      position: absolute;
+      top: 50%;
+      height: 0.1rem;
+      width: 1.5rem;
+      background: rgb(58, 58, 58);
+      border-radius: 2rem;
+      transition: all 0.3s ease;
+
+      &::before {
+        position: absolute;
+        content: '';
+        height: 0.1rem;
+        width: 1.5rem;
+        background: rgb(70, 70, 70);
+        top: -0.6rem;
+        border-radius: 2rem;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        height: 0.1rem;
+        width: 1.5rem;
+        background: rgb(70, 70, 70);
+        top: 0.6rem;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    justify-content: space-around;
+    .nav-links {
+      position: absolute;
+      top: 8vh;
+      right: -350px;
+      flex-direction: column-reverse;
+      width: 15rem;
+      height: 92vh;
+      background: #fabf3f;
+      transition: all 0.4s ease;
+      visibility: hidden;
+      z-index: 1000;
+
+      ul {
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        width: 100%;
+        li {
+          padding: 1rem;
+          margin: 1rem;
+          a {
+            color: rgb(27, 27, 27);
+          }
+        }
+      }
+
+      &.active {
+        visibility: visible;
+        right: -50px;
+        ul {
+          opacity: 1;
+        }
+      }
+    }
+    .phone {
+      flex: 1;
+      justify-content: center;
+      font-weight: 500;
+    }
+    .burger-menu {
+      display: flex;
+
+      &.active {
+        .burger-dash {
+          transform: rotate(180deg);
+
+          &::before {
+            transform-origin: 100% 50%;
+            transform: translateY(-2px) translateX(-13px) rotate(-45deg) scaleX(0.7);
+          }
+          &::after {
+            transform-origin: 100% 50%;
+            transform: translateY(2px) translateX(-13px) rotate(45deg) scaleX(0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Iphone X screen
+@media screen and (max-width: 375px) {
+  .header {
+    border-radius: unset;
+    justify-content: space-between;
+    height: 7vh;
+    width: 100%;
+    .logo {
+      height: 3rem;
+      margin-top: 1rem;
+    }
+    .nav-links {
+      top: 7vh;
+      width: 12rem;
+      ul {
+        padding-right: 2rem;
+      }
+    }
+    .phone {
+      font-size: 0.9rem;
+      .phone-icon {
+        height: 1rem;
+      }
+    }
+    .language {
+      display: none;
+    }
+    .burger-menu {
+    }
+  }
+}
