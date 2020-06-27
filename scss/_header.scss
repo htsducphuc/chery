@@ -67,7 +67,7 @@
     }
     a {
       text-decoration: none;
-      color: green;
+      color: #3b3b3b;
     }
   }
   .language {
@@ -193,15 +193,15 @@
 }
 
 //Iphone X screen
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .header {
     border-radius: unset;
     justify-content: space-between;
     height: 7vh;
     width: 100%;
     .logo {
-      height: 3rem;
-      margin-top: 1rem;
+      height: 4rem;
+      margin-top: 2.3rem;
     }
     .nav-links {
       top: 7vh;
@@ -211,7 +211,7 @@
       }
     }
     .phone {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       .phone-icon {
         height: 1rem;
       }
