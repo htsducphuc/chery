@@ -13,6 +13,10 @@
     align-items: center;
     width: 50%;
     border-right: 1px solid black;
+    h3 {
+      color: black;
+      margin-bottom: 1rem;
+    }
 
     img {
       width: 80%;
@@ -21,6 +25,10 @@
     .schedule {
       padding: 2rem;
       display: flex;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
+
       ul {
         list-style: none;
       }
@@ -53,6 +61,8 @@
     padding-bottom: 2rem;
     flex-direction: column;
     align-items: center;
+    background-image: url('../images/finger-mobile.svg');
+    background-size: contain;
     .information {
       border: none;
       width: 100%;
@@ -61,6 +71,7 @@
         background-color: rgb(43, 43, 43);
         width: 80%;
         height: 2px;
+        margin-top: 2rem;
       }
     }
     .maps {

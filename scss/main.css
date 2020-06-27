@@ -258,7 +258,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 7vh;
+    height: 7.5vh;
     width: 100%;
   }
   .header .logo {
@@ -266,17 +266,17 @@
     margin-top: 2.3rem;
   }
   .header .nav-links {
-    top: 7vh;
+    top: 7.5vh;
     width: 12rem;
   }
   .header .nav-links ul {
     padding-right: 2rem;
   }
   .header .phone {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .header .phone .phone-icon {
-    height: 1rem;
+    height: 1.5rem;
   }
   .header .language {
     display: none;
@@ -449,6 +449,11 @@
   border-right: 1px solid black;
 }
 
+.contact .information h3 {
+  color: black;
+  margin-bottom: 1rem;
+}
+
 .contact .information img {
   width: 80%;
   margin: 2rem 0rem;
@@ -459,6 +464,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
+          box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
 }
 
 .contact .information .schedule ul {
@@ -508,6 +517,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-image: url("../images/finger-mobile.svg");
+    background-size: contain;
   }
   .contact .information {
     border: none;
@@ -518,6 +529,7 @@
     background-color: #2b2b2b;
     width: 80%;
     height: 2px;
+    margin-top: 2rem;
   }
   .contact .maps {
     width: 95%;
