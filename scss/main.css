@@ -213,6 +213,9 @@
   .header .nav-links ul li a {
     color: #1b1b1b;
   }
+  .header .nav-links ul li a:hover {
+    color: white;
+  }
   .header .nav-links.active {
     visibility: visible;
     right: -50px;
