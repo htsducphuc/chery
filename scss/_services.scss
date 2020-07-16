@@ -12,48 +12,62 @@
   background-position: center center;
 
   h1 {
-    margin-top: 4rem;
+    margin: 4rem;
   }
   .services {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 15rem);
-    justify-content: center;
-    gap: 2rem;
-    padding: 3rem 0rem;
-
-    .service {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .board-1,
+    .board-2 {
+      width: 500px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      background: rgb(216, 216, 216);
+      background-image: url('../images/blackboard.jpg');
+      background-size: cover;
+      border: 0.2rem solid rgb(39, 39, 39);
       height: 23rem;
-      border-radius: 1rem;
-      background-color: white;
       box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
       border-radius: 1rem;
-      overflow: hidden;
       transition: 1s all ease;
       opacity: 0;
       transform: translateY(1rem);
 
-      img {
-        object-fit: cover;
-        height: 100%;
-      }
-      div {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        background-color: rgba(61, 61, 61, 0.678);
-        padding: 1rem 0rem;
-        color: white;
-      }
       &.showed {
         opacity: 1;
         transform: translateY(0rem);
       }
+    }
+    .board-1 > img:first-child {
+      object-fit: cover;
+      position: absolute;
+      height: 220px;
+      bottom: -55px;
+      right: -55px;
+    }
+    .board-1 > img:nth-child(2) {
+      object-fit: cover;
+      position: absolute;
+      top: -35px;
+      left: -35px;
+      height: 220px;
+    }
+    .board-2 > img:first-child {
+      object-fit: cover;
+      position: absolute;
+      height: 220px;
+      bottom: -60px;
+      right: -60px;
+    }
+    .board-2 > img:nth-child(2) {
+      object-fit: cover;
+      position: absolute;
+      top: -60px;
+      left: -70px;
+      height: 200px;
     }
   }
 }
@@ -61,10 +75,27 @@
 @media screen and (max-width: 414px) {
   .services-section {
     .services {
-      .service {
-        margin-left: -20px;
-        width: 280px;
-        height: 300px;
+      overflow: hidden;
+      .board-1,
+      .board-2 {
+        width: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .services-section {
+    h1 {
+      margin: 0;
+      margin-top: 2rem;
+    }
+    .services {
+      flex-direction: column;
+      height: 1000px;
+      .board-1,
+      .board-2 {
+        height: 400px;
       }
     }
   }
