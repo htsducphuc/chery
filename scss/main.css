@@ -675,6 +675,7 @@
 }
 
 .services-section .services {
+  margin-bottom: 5rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -704,7 +705,7 @@
   background-image: url("../images/blackboard.jpg");
   background-size: cover;
   border: 0.2rem solid #272727;
-  height: 23rem;
+  height: 38rem;
   -webkit-box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
           box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
   border-radius: 1rem;
@@ -713,6 +714,43 @@
   opacity: 0;
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
+}
+
+.services-section .services .board-1 > div,
+.services-section .services .board-2 > div {
+  height: 100%;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-section .services .board-1 > div h3,
+.services-section .services .board-2 > div h3 {
+  padding: 1.5rem 0;
+}
+
+.services-section .services .board-1 > div table,
+.services-section .services .board-2 > div table {
+  width: 90%;
+}
+
+.services-section .services .board-1 > div table th,
+.services-section .services .board-1 > div table td,
+.services-section .services .board-2 > div table th,
+.services-section .services .board-2 > div table td {
+  line-height: 300%;
+  border-bottom: 1px solid white;
+  font-weight: 500;
 }
 
 .services-section .services .board-1.showed,
@@ -759,30 +797,28 @@
 }
 
 @media screen and (max-width: 414px) {
-  .services-section .services {
+  .services-section {
+    height: auto;
     overflow: hidden;
   }
   .services-section .services .board-1,
   .services-section .services .board-2 {
     width: 85%;
+    height: auto;
+    margin: 2rem 0;
+  }
+  .services-section .services .board-1 > div,
+  .services-section .services .board-2 > div {
+    margin-bottom: 5rem;
   }
 }
 
 @media screen and (max-width: 1050px) {
-  .services-section h1 {
-    margin: 0;
-    margin-top: 2rem;
-  }
   .services-section .services {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 1000px;
-  }
-  .services-section .services .board-1,
-  .services-section .services .board-2 {
-    height: 400px;
   }
 }
 

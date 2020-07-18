@@ -15,6 +15,7 @@
     margin: 4rem;
   }
   .services {
+    margin-bottom: 5rem;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -29,12 +30,34 @@
       background-image: url('../images/blackboard.jpg');
       background-size: cover;
       border: 0.2rem solid rgb(39, 39, 39);
-      height: 23rem;
+      height: 38rem;
       box-shadow: 0 10px 50px 0 rgba(86, 66, 35, 0.1), 0 5px 10px 0 rgba(86, 66, 35, 0.1);
       border-radius: 1rem;
       transition: 1s all ease;
       opacity: 0;
       transform: translateY(1rem);
+
+      & > div {
+        height: 100%;
+        color: white;
+        font-size: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h3 {
+          padding: 1.5rem 0;
+        }
+        table {
+          width: 90%;
+          th,
+          td {
+            line-height: 300%;
+            border-bottom: 1px solid white;
+            font-weight: 500;
+          }
+        }
+      }
 
       &.showed {
         opacity: 1;
@@ -74,11 +97,17 @@
 
 @media screen and (max-width: 414px) {
   .services-section {
+    height: auto;
+    overflow: hidden;
     .services {
-      overflow: hidden;
       .board-1,
       .board-2 {
         width: 85%;
+        height: auto;
+        margin: 2rem 0;
+        & > div {
+          margin-bottom: 5rem;
+        }
       }
     }
   }
@@ -86,16 +115,10 @@
 
 @media screen and (max-width: 1050px) {
   .services-section {
-    h1 {
-      margin: 0;
-      margin-top: 2rem;
-    }
     .services {
       flex-direction: column;
-      height: 1000px;
       .board-1,
       .board-2 {
-        height: 400px;
       }
     }
   }
